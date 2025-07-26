@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects Portfolio - Henry Tweneboah | Cloud Engineer</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Fixed Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-surface/95 backdrop-blur-md border-b border-secondary-200 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="professional_portfolio_homepage.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="text-xl font-bold text-primary">Henry</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="professional_portfolio_homepage.html#about" class="text-text-secondary hover:text-primary transition-colors duration-200">About</a>
+                        <a href="professional_portfolio_homepage.html#skills" class="text-text-secondary hover:text-primary transition-colors duration-200">Skills</a>
+                        <a href="projects_portfolio_showcase.html" class="text-text-primary hover:text-primary transition-colors duration-200 font-medium">Projects</a>
+                        <!-- <a href="professional_experience_timeline.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Experience</a> -->
+                        <!-- <a href="contact_services_inquiry.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Contact</a> -->
+                    </div>
+                </div>
+
+                <!-- Resume Download Button -->
+                <div class="hidden md:block">
+                    <a href="#" class="btn-primary inline-flex items-center space-x-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-surface border-t border-secondary-200">
+                    <a href="professional_portfolio_homepage.html#about" class="block px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200">About</a>
+                    <a href="professional_portfolio_homepage.html#skills" class="block px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200">Skills</a>
+                    <a href="projects_portfolio_showcase.html" class="block px-3 py-2 text-text-primary hover:text-primary transition-colors duration-200 font-medium">Projects</a>
+                    <!-- <a href="professional_experience_timeline.html" class="block px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200">Experience</a> -->
+                    <!-- <a href="contact_services_inquiry.html" class="block px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200">Contact</a> -->
+                    <a href="#" class="block px-3 py-2 text-primary hover:text-primary-700 transition-colors duration-200 font-medium">Download Resume</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="pt-20 pb-4 bg-surface border-b border-secondary-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="professional_portfolio_homepage.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
+                <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                <span class="text-primary font-medium">Projects</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="py-16 bg-gradient-to-br from-primary-50 to-secondary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold text-text-primary mb-4">
+                    Project Portfolio
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
+                    Explore my cloud engineering implementations, AWS solutions, and technical achievements across various industries and project scales.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div class="flex items-center space-x-2 text-text-secondary">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>15+ Completed Projects</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                        <span>10+ Satisfied Clients</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                        <span>Multiple Industries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="py-8 bg-surface sticky top-16 z-40 border-b border-secondary-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-2">
+                <button class="filter-tab active" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-tab" data-filter="aws-services">
+                    AWS Services
+                </button>
+                <button class="filter-tab" data-filter="infrastructure">
+                    Infrastructure
+                </button>
+                <button class="filter-tab" data-filter="applications">
+                    Applications
+                </button>
+                <button class="filter-tab" data-filter="consulting">
+                    Consulting
+                </button>
+            </div>
+            
+            <!-- Mobile Filter Toggle -->
+            <div class="md:hidden mt-4">
+                <button class="w-full btn-secondary flex items-center justify-center space-x-2" id="mobile-filter-toggle">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+                    </svg>
+                    <span>Advanced Filters</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project Section -->
+    <section class="py-16 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Featured Project</h2>
+                <p class="text-lg text-text-secondary">Highlighting our most impressive cloud implementation</p>
+            </div>
+
+            <div class="card overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    <!-- Featured Project Image -->
+                    <div class="aspect-video lg:aspect-square overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise E-commerce Platform Migration" class="w-full h-full object-cover" onerror="this.src='https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1000'; this.onerror=null;" />
+                    </div>
+                    
+                    <!-- Featured Project Content -->
+                    <div class="p-8 lg:p-12">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary-100 text-primary text-sm rounded-full font-medium">AWS Services</span>
+                            <span class="px-3 py-1 bg-accent-100 text-accent text-sm rounded-full font-medium">Infrastructure</span>
+                            <span class="px-3 py-1 bg-success-100 text-success text-sm rounded-full font-medium">Applications</span>
+                        </div>
+                        
+                        <h3 class="text-2xl lg:text-3xl font-bold text-text-primary mb-4">
+                            Enterprise E-commerce Platform Migration
+                        </h3>
+                        
+                        <p class="text-text-secondary mb-6 leading-relaxed">
+                            Successfully migrated a legacy e-commerce platform serving 100K+ daily users to AWS, 
+                            achieving 99.9% uptime, 40% cost reduction, and 60% performance improvement through 
+                            strategic cloud architecture and auto-scaling implementation.
+                        </p>
+                        
+                        <!-- Key Metrics -->
+                        <div class="grid grid-cols-3 gap-4 mb-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-primary">99.9%</div>
+                                <div class="text-sm text-text-secondary">Uptime</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-primary">40%</div>
+                                <div class="text-sm text-text-secondary">Cost Reduction</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-primary">60%</div>
+                                <div class="text-sm text-text-secondary">Performance Boost</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Technology Stack -->
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-text-primary mb-3">Technology Stack:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">EC2</span>
+                                <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">RDS Aurora</span>
+                                <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">CloudFront</span>
+                                <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">ElastiCache</span>
+                                <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Load Balancer</span>
+                                <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Auto Scaling</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-primary project-detail-btn" data-project="featured">
+                            View Project Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">All Projects</h2>
+                <p class="text-lg text-text-secondary">Comprehensive portfolio of cloud engineering solutions</p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Project 1: Serverless Data Pipeline -->
+                <!-- <div class="project-card card overflow-hidden group" data-category="aws-services infrastructure">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg" alt="Serverless Data Pipeline" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">AWS Services</span>
+                            <span class="px-2 py-1 bg-primary-100 text-primary text-xs rounded-full">Infrastructure</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Serverless Data Pipeline</h3>
+                        <p class="text-text-secondary mb-4">Real-time data processing pipeline using Lambda, Kinesis, and DynamoDB for IoT sensor data analytics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Lambda</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Kinesis</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">DynamoDB</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">API Gateway</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-text-secondary">Completed: Oct 2024</span>
+                            <button class="text-primary hover:text-primary-700 font-medium project-detail-btn" data-project="serverless-pipeline">
+                                View Details →
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Project 2: Multi-Region Disaster Recovery -->
+                <!-- <div class="project-card card overflow-hidden group" data-category="infrastructure consulting">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Multi-Region Disaster Recovery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-2 py-1 bg-success-100 text-success text-xs rounded-full">Infrastructure</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded-full">Consulting</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Multi-Region Disaster Recovery</h3>
+                        <p class="text-text-secondary mb-4">Cross-region backup and disaster recovery solution with automated failover for financial services client.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">S3</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Route 53</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">CloudFormation</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">RDS</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-text-secondary">Completed: Sep 2024</span>
+                            <button class="text-primary hover:text-primary-700 font-medium project-detail-btn" data-project="disaster-recovery">
+                                View Details →
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Project 3: Microservices Architecture -->
+                <div class="project-card card overflow-hidden group" data-category="applications infrastructure">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Microservices Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1000'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">Applications</span>
+                            <span class="px-2 py-1 bg-primary-100 text-primary text-xs rounded-full">Infrastructure</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Microservices Architecture</h3>
+                        <p class="text-text-secondary mb-4">Containerized microservices deployment using ECS, Docker, and API Gateway for scalable SaaS platform.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">ECS</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Docker</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">API Gateway</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">ALB</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-text-secondary">Completed: Aug 2024</span>
+                            <button class="text-primary hover:text-primary-700 font-medium project-detail-btn" data-project="microservices">
+                                View Details →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Static Website Hosting -->
+                <div class="project-card card overflow-hidden group" data-category="aws-services applications">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Static Website Hosting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">AWS Services</span>
+                            <span class="px-2 py-1 bg-success-100 text-success text-xs rounded-full">Applications</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Global Static Website Hosting</h3>
+                        <p class="text-text-secondary mb-4">High-performance static website hosting with global CDN, SSL certificates, and automated deployments.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">S3</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">CloudFront</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Route 53</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Certificate Manager</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-text-secondary">Completed: Jul 2024</span>
+                            <button class="text-primary hover:text-primary-700 font-medium project-detail-btn" data-project="static-hosting">
+                                View Details →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: DevOps Pipeline -->
+                <!-- <div class="project-card card overflow-hidden group" data-category="infrastructure consulting">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3" alt="DevOps CI/CD Pipeline" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=1000'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-2 py-1 bg-primary-100 text-primary text-xs rounded-full">Infrastructure</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded-full">Consulting</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">DevOps CI/CD Pipeline</h3>
+                        <p class="text-text-secondary mb-4">Automated deployment pipeline with testing, security scanning, and multi-environment promotion workflows.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">CodePipeline</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">CodeBuild</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">CodeDeploy</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">CloudFormation</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-text-secondary">Completed: Jun 2024</span>
+                            <button class="text-primary hover:text-primary-700 font-medium project-detail-btn" data-project="devops-pipeline">
+                                View Details →
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Project 6: Data Analytics Platform -->
+                <div class="project-card card overflow-hidden group" data-category="aws-services applications">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Data Analytics Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">AWS Services</span>
+                            <span class="px-2 py-1 bg-success-100 text-success text-xs rounded-full">Applications</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Data Analytics Platform</h3>
+                        <p class="text-text-secondary mb-4">Comprehensive data analytics solution using Redshift, QuickSight, and Glue for business intelligence.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Redshift</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">QuickSight</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Glue</span>
+                            <span class="px-2 py-1 bg-secondary-100 text-secondary text-xs rounded">Athena</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-text-secondary">Completed: May 2024</span>
+                            <button class="text-primary hover:text-primary-700 font-medium project-detail-btn" data-project="analytics-platform">
+                                View Details →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="btn-secondary" id="load-more-btn">
+                    Load More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-surface rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+                <div class="sticky top-0 bg-surface border-b border-secondary-200 p-6 flex justify-between items-center">
+                    <h2 id="modal-title" class="text-2xl font-bold text-text-primary">Project Details</h2>
+                    <button id="close-modal" class="text-text-secondary hover:text-text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div id="modal-content" class="p-6">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA Section -->
+    <section class="py-16 bg-gradient-to-br from-primary-50 to-accent-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-text-primary mb-4">Ready to Start Your Next Project?</h2>
+            <p class="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
+                Let's discuss how I can help you build scalable, secure, and cost-effective cloud solutions for your business.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="professional_portfolio_homepage.html#contact" class="btn-primary">
+                    Get In Touch
+                </a>
+                <!-- <a href="professional_experience_timeline.html" class="btn-secondary">
+                    View Experience
+                </a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="text-xl font-bold">Henry's Portfolio</span>
+                    </div>
+                    <p class="text-secondary-300 mb-4">
+                        Professional cloud engineering services specializing in AWS infrastructure, 
+                        automation, and scalable solutions for modern businesses.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="professional_portfolio_homepage.html#about" class="text-secondary-300 hover:text-accent transition-colors duration-200">About</a></li>
+                        <li><a href="professional_portfolio_homepage.html#skills" class="text-secondary-300 hover:text-accent transition-colors duration-200">Skills</a></li>
+                        <li><a href="projects_portfolio_showcase.html" class="text-secondary-300 hover:text-accent transition-colors duration-200">Projects</a></li>
+                        <!-- <li><a href="professional_experience_timeline.html" class="text-secondary-300 hover:text-accent transition-colors duration-200">Experience</a></li> -->
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="professional_portfolio_homepage.html#contact" class="text-secondary-300 hover:text-accent transition-colors duration-200">Cloud Migration</a></li>
+                        <li><a href="" class="text-secondary-300 hover:text-accent transition-colors duration-200">Infrastructure Design</a></li>
+                        <li><a href="" class="text-secondary-300 hover:text-accent transition-colors duration-200">DevOps Consulting</a></li>
+                        <li><a href="" class="text-secondary-300 hover:text-accent transition-colors duration-200">Security Audits</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary-700 mt-8 pt-8 text-center">
+                <p class="text-secondary-400">
+                    © 2025. All rights reserved. | Built with passion for cloud excellence.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="fab" onclick="scrollToTop()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+
+    <style>
+        .filter-tab {
+            @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-200;
+            @apply text-text-secondary bg-secondary-100 hover:bg-secondary-200;
+        }
+        
+        .filter-tab.active {
+            @apply text-white bg-primary;
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-card.hidden {
+            display: none;
+        }
+    </style>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                filterTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.classList.remove('hidden');
+                    } else {
+                        const categories = card.getAttribute('data-category');
+                        if (categories && categories.includes(filter)) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+
+        // Project detail modal functionality
+        const modal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+        const projectDetailBtns = document.querySelectorAll('.project-detail-btn');
+
+        // Project data
+        const projectData = {
+            'featured': {
+                title: 'Enterprise E-commerce Platform Migration',
+                content: `
+                    <div class="space-y-6">
+                        <div class="aspect-video overflow-hidden rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                                 alt="E-commerce Platform Architecture" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-primary-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Challenge</h4>
+                                <p class="text-sm text-text-secondary">Legacy monolithic architecture causing performance bottlenecks and high operational costs.</p>
+                            </div>
+                            <div class="bg-success-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-success mb-2">Solution</h4>
+                                <p class="text-sm text-text-secondary">Migrated to AWS with microservices architecture, auto-scaling, and managed services.</p>
+                            </div>
+                            <div class="bg-accent-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-accent mb-2">Results</h4>
+                                <p class="text-sm text-text-secondary">99.9% uptime, 40% cost reduction, 60% performance improvement.</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold text-text-primary mb-3">Technical Implementation</h4>
+                            <ul class="space-y-2 text-text-secondary">
+                                <li>• Containerized application using Docker and deployed on ECS</li>
+                                <li>• Implemented auto-scaling groups for dynamic resource allocation</li>
+                                <li>• Set up Application Load Balancer for traffic distribution</li>
+                                <li>• Migrated database to RDS Aurora with read replicas</li>
+                                <li>• Implemented CloudFront CDN for global content delivery</li>
+                                <li>• Set up comprehensive monitoring with CloudWatch</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="btn-primary">View Live Demo</a>
+                            <a href="#" class="btn-secondary">GitHub Repository</a>
+                            <a href="contact_services_inquiry.html" class="btn-secondary">Discuss Similar Project</a>
+                        </div>
+                    </div>
+                `
+            },
+            'serverless-pipeline': {
+                title: 'Serverless Data Pipeline',
+                content: `
+                    <div class="space-y-6">
+                        <div class="aspect-video overflow-hidden rounded-lg">
+                            <img src="https://images.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg" 
+                                 alt="Serverless Pipeline Architecture" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold text-text-primary mb-3">Project Overview</h4>
+                            <p class="text-text-secondary mb-4">Built a real-time data processing pipeline for IoT sensor data using serverless AWS services. The solution processes thousands of events per second with automatic scaling and cost optimization.</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-3">Key Features</h4>
+                                <ul class="space-y-2 text-text-secondary">
+                                    <li>• Real-time data ingestion via Kinesis</li>
+                                    <li>• Lambda functions for data transformation</li>
+                                    <li>• DynamoDB for high-speed data storage</li>
+                                    <li>• API Gateway for data access</li>
+                                    <li>• CloudWatch for monitoring and alerting</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-3">Technologies Used</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-accent-100 text-accent text-sm rounded-full">AWS Lambda</span>
+                                    <span class="px-3 py-1 bg-primary-100 text-primary text-sm rounded-full">Kinesis</span>
+                                    <span class="px-3 py-1 bg-success-100 text-success text-sm rounded-full">DynamoDB</span>
+                                    <span class="px-3 py-1 bg-secondary-100 text-secondary text-sm rounded-full">API Gateway</span>
+                                    <span class="px-3 py-1 bg-secondary-100 text-secondary text-sm rounded-full">CloudWatch</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="btn-primary">View Architecture</a>
+                            <a href="#" class="btn-secondary">Code Samples</a>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        projectDetailBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const projectId = this.getAttribute('data-project');
+                const project = projectData[projectId];
+                
+                if (project) {
+                    modalTitle.textContent = project.title;
+                    modalContent.innerHTML = project.content;
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', function() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Load more functionality
+        document.getElementById('load-more-btn').addEventListener('click', function() {
+            // Simulate loading more projects
+            this.textContent = 'Loading...';
+            setTimeout(() => {
+                this.textContent = 'All Projects Loaded';
+                this.disabled = true;
+                this.classList.add('opacity-50', 'cursor-not-allowed');
+            }, 1000);
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide floating action button based on scroll position
+        window.addEventListener('scroll', function() {
+            const fab = document.querySelector('.fab');
+            if (window.scrollY > 300) {
+                fab.style.display = 'flex';
+            } else {
+                fab.style.display = 'none';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all project cards for fade-in animation
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.classList.add('fade-in');
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>
